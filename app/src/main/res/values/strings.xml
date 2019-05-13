@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">APCO</string>
+    <string name="cadastre_texto"><u>Cadastre-se</u></string>
+    <string name="recuperar_senha_texto">Esqueceu a senha?</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_login">Login</string>
 </resources>
