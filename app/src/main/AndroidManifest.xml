@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".SenhaActivity"></activity>
+        <activity android:name=".SenhaActivity" />
     </application>
 
 </manifest>
