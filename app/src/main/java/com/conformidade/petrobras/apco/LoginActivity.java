@@ -2,6 +2,7 @@ package com.conformidade.petrobras.apco;
 
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,8 +12,8 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextInputEditText login;
-    private TextInputEditText senha;
+    private TextInputLayout login;
+    private TextInputLayout senha;
     private Button botaoEntrar;
     private TextView linkCadastrar;
     private TextView linkRecuperarSenha;
@@ -33,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this, SenhaActivity.class);
-                ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(getApplicationContext(), R.anim.)
+                //ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(getApplicationContext(), R.anim.)
                 startActivity(i);
             }
         });

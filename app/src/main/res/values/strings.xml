@@ -4,4 +4,7 @@
     <string name="recuperar_senha_texto">Esqueceu a senha?</string>
     <string name="hint_senha">Senha</string>
     <string name="hint_login">Login</string>
+    <string name="botao_enviar">Enviar</string>
+    <string name="hint_email">Digite seu e-mail</string>
+    <string name="texto_inserir_email">Insira o endereço de e-mail cadastrado para recuperar a senha.</string>
 </resources>
