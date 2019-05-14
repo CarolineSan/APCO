@@ -7,4 +7,26 @@
     <string name="botao_enviar">Enviar</string>
     <string name="hint_email">Digite seu e-mail</string>
     <string name="texto_inserir_email">Insira o endereço de e-mail cadastrado para recuperar a senha.</string>
+
+    <string-array name="funcoes">
+        <item>Função 1</item>
+        <item>Função 2</item>
+        <item>Função 3</item>
+        <item>Função 4</item>
+    </string-array>
+
+    <string-array name="vinculos">
+        <item>Vinculo 1</item>
+        <item>Vinculo 2</item>
+        <item>Vinculo 3</item>
+        <item>Vinculo 4</item>
+    </string-array>
+
+    <string-array name="segmentos">
+        <item>Segmento 1</item>
+        <item>Segmento 2</item>
+        <item>Segmento 3</item>
+        <item>Segmento 4</item>
+    </string-array>
+
 </resources>

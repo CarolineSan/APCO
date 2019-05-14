@@ -34,7 +34,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this, SenhaActivity.class);
-                //ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeCustomAnimation(getApplicationContext(), R.anim.)
+                startActivity(i);
+            }
+        });
+
+        linkCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, CadastroActivity.class);
                 startActivity(i);
             }
         });
