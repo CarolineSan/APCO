@@ -58,7 +58,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <TextView
-        android:id="@+id/linkCadastrar"
+        android:id="@+id/linkCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
