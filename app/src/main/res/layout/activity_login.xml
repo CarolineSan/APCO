@@ -100,6 +100,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="60dp"
         android:background="#FF002722"
+        android:onClick="entrar"
         android:text="Entrar"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"

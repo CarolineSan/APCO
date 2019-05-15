@@ -1,9 +1,12 @@
 package com.conformidade.petrobras.apco;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -50,5 +53,13 @@ public class CadastroActivity extends AppCompatActivity {
                 getResources().getStringArray(R.array.segmentos));
         adapterFuncoes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSegmento.setAdapter(adapterSegmento);
+    }
+
+    public void abrirTermos(View view) {
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(CadastroActivity.this);
+        View mView = getLayoutInflater().inflate(R.layout.dialog_termos, null);
+        mBuilder.setView(mView);
+        AlertDialog dialog = mBuilder.create();
+        dialog.show();
     }
 }

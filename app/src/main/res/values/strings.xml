@@ -7,6 +7,8 @@
     <string name="botao_enviar">Enviar</string>
     <string name="hint_email">Digite seu e-mail</string>
     <string name="texto_inserir_email">Insira o endereço de e-mail cadastrado para recuperar a senha.</string>
+    <string name="leia_termos"><u>Leia</u></string>
+    <string name="termo_texto">Nullam venenatis erat sed bibendum aliquam. Ut turpis turpis, viverra eu eros eget, pellentesque dictum risus. Etiam consectetur, lorem sit amet laoreet aliquet, velit tellus fermentum nunc, ut facilisis massa nulla a magna. Nullam cursus id lectus eget rhoncus. Nam cursus, ante ut varius mollis, sapien diam maximus mauris, finibus congue nunc lectus nec purus. Donec luctus dictum fringilla.</string>
 
     <string-array name="funcoes">
         <item>Função 1</item>
