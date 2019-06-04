@@ -1,109 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login"
+    android:background="@drawable/fundo"
+    android:gravity="center_vertical|center_horizontal"
+    android:paddingLeft="24dp"
+    android:paddingTop="80dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="24dp"
     tools:context=".LoginActivity">
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/hint_login"
-        android:textColorHint="#CACACA"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_account_box_24dp"
             android:drawablePadding="3dp"
-            android:inputType="text"
-            android:textColor="@android:color/background_light"
-            android:textSize="20sp" />
+            android:hint="@string/hint_login" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputPassword"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/hint_senha"
-        android:textColorHint="#CACACA"
-        app:layout_constraintBottom_toTopOf="@+id/btnEntrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_below="@+id/inputLogin"
+        android:layout_alignParentStart="true"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="149dp">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/inputLogin"
             android:drawableLeft="@drawable/ic_block_24dp"
             android:drawablePadding="3dp"
-            android:inputType="textPassword"
-            android:textColor="@android:color/background_light"
-            android:textSize="20sp" />
+            android:hint="@string/hint_senha" />
     </android.support.design.widget.TextInputLayout>
 
-    <TextView
-        android:id="@+id/linkCadastro"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="24dp"
-        android:clickable="false"
-        android:text="@string/cadastre_texto"
-        android:textAllCaps="false"
+        android:layout_below="@+id/inputPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/btn_entrar"
         android:textColor="@android:color/background_light"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.43" />
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="365dp" />
 
     <TextView
         android:id="@+id/linkSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="24dp"
-        android:clickable="false"
+        android:layout_below="@+id/btnEntrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical|center_horizontal"
         android:text="@string/recuperar_senha_texto"
-        android:textColor="@android:color/background_light"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="284dp" />
 
-    <Button
-        android:id="@+id/btnEntrar"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/linkCadastro"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/linkSenha"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="60dp"
-        android:background="#FF002722"
-        android:onClick="entrar"
-        android:text="Entrar"
-        android:textColor="@android:color/background_light"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/cadastre_texto"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword" />
-</android.support.constraint.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent" />
+</RelativeLayout>

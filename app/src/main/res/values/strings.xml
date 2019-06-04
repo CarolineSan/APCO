@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Conformidade</string>
-    <string name="cadastre_texto"><u>Cadastre-se</u></string>
-    <string name="recuperar_senha_texto">Esqueceu a senha?</string>
+    <string name="cadastre_texto"><u>Cadastrar-se</u></string>
+    <string name="recuperar_senha_texto">Esqueceu a senha</string>
     <string name="hint_senha">Senha</string>
     <string name="hint_login">Login</string>
     <string name="botao_enviar">Enviar</string>
@@ -37,5 +37,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_entrar">Entrar</string>
 
 </resources>
