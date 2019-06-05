@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_3"
+    android:background="@drawable/fundo2"
     tools:context=".CadastroActivity">
 
     <include
@@ -34,7 +34,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="16dp"
             android:text="Nome:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,7 +48,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_person_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -67,7 +68,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Login:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -80,7 +82,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_person_add_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -100,7 +102,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Senha:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
@@ -113,7 +116,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_lock_open_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -133,7 +136,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Confirmar Senha:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
@@ -146,7 +150,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -166,7 +170,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="E-mail:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
@@ -179,7 +184,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_email_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -199,7 +204,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Função:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
@@ -212,7 +218,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -225,7 +231,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Empresa:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinner1" />
 
@@ -238,7 +245,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_location_city_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -258,7 +265,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Vínculo com a Petrobras:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
@@ -271,7 +279,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -284,7 +292,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Segmento:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
@@ -297,7 +306,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -310,7 +319,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="E-mail de Indicação:"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinner3" />
 
@@ -323,7 +333,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_group_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -343,7 +353,8 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="8dp"
             android:text="Documento de Identificação (CPF):"
-            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
@@ -356,7 +367,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:background="#30FFFFFF"
+            android:background="#10000000"
             android:drawableLeft="@drawable/ic_person_pin_black_24dp"
             android:drawablePadding="3dp"
             android:ems="10"
@@ -376,7 +387,6 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="10dp"
             android:text="Aceito as condições de uso da informação."
-            android:textColor="@android:color/background_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText8" />
 
@@ -390,7 +400,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="16dp"
-            android:background="#FF002722"
+            android:background="@color/colorPrimaryDark"
             android:text="Confirmar"
             android:textColor="@android:color/background_light"
             app:layout_constraintBottom_toBottomOf="parent"
