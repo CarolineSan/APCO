@@ -5,19 +5,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_conta"
             android:icon="@drawable/ic_account_box_24dp"
             android:title="Conta" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_publicacoes"
-            android:title="Publicações" />
+            android:id="@+id/nav_ranking"
+            android:icon="@drawable/ic_menu_ranking"
+            android:title="Ranking" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_categorias"
+            android:icon="@drawable/ic_menu_categorias"
+            android:title="Categorias" />
+
+        <item
+            android:id="@+id/nav_salvos"
             android:icon="@drawable/ic_menu_salvar"
             android:title="Salvos" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_sugestao"
             android:icon="@drawable/ic_menu_sugestao"
             android:title="Sugestão" />
     </group>
@@ -29,7 +34,7 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Compartilhar" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_help"
                 android:icon="@drawable/ic_menu_help"
                 android:title="Ajuda" />
         </menu>
