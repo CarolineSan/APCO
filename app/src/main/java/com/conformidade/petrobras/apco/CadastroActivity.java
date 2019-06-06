@@ -27,7 +27,7 @@ public class CadastroActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close_white_24dp);
         getSupportActionBar().setElevation(4);
 
-        //Configura Sínner das Funções
+        //Configura Spinner das Funções
         spinnerFuncao = findViewById(R.id.spinner1);
         ArrayAdapter<String> adapterFuncoes = new ArrayAdapter<>(
                 CadastroActivity.this,
