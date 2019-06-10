@@ -1,11 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tituloTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="3dp"
+                android:paddingLeft="15dp"
+                android:text="Últimas Publicações"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tituloTexto" />
+
+            <TextView
+                android:id="@+id/verMaisTexto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerTexto"
+                android:layout_alignEnd="@+id/recyclerTexto"
+                android:layout_alignRight="@+id/recyclerTexto"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginEnd="13dp"
+                android:text="Ver Tudo"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tituloPesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verMaisTexto"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="3dp"
+                android:paddingLeft="15dp"
+                android:text="Últimas Pesquisas"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerPesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tituloPesquisa" />
+
+            <TextView
+                android:id="@+id/verMaisPesquisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerPesquisa"
+                android:layout_alignEnd="@+id/recyclerPesquisa"
+                android:layout_alignRight="@+id/recyclerPesquisa"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginEnd="13dp"
+                android:text="Ver Tudo"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tituloQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verMaisPesquisa"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="3dp"
+                android:paddingLeft="15dp"
+                android:text="Últimos Quizzes"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tituloQuiz" />
+
+            <TextView
+                android:id="@+id/verMaisQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerQuiz"
+                android:layout_alignEnd="@+id/recyclerQuiz"
+                android:layout_alignRight="@+id/recyclerQuiz"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="10dp"
+                android:text="Ver Tudo"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
