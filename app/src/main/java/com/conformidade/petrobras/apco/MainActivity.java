@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.conformidade.petrobras.apco.categoria.CategoriaActivity;
 import com.conformidade.petrobras.apco.model.MyAdapterPesquisa;
 import com.conformidade.petrobras.apco.model.MyAdapterQuiz;
 import com.conformidade.petrobras.apco.model.MyAdapterTexto;
@@ -128,7 +129,8 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(MainActivity.this, RankingActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_categorias) {
-
+            Intent i = new Intent(MainActivity.this, CategoriaActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_salvos) {
 
         } else if (id == R.id.nav_sugestao) {
