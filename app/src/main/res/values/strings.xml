@@ -11,6 +11,7 @@
     <string name="termo_texto">Nullam venenatis erat sed bibendum aliquam. Ut turpis turpis, viverra eu eros eget, pellentesque dictum risus. Etiam consectetur, lorem sit amet laoreet aliquet, velit tellus fermentum nunc, ut facilisis massa nulla a magna. Nullam cursus id lectus eget rhoncus. Nam cursus, ante ut varius mollis, sapien diam maximus mauris, finibus congue nunc lectus nec purus. Donec luctus dictum fringilla.</string>
     <string name="texto_descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae elit id quam ornare tristique. Aliquam vulputate turpis at quam ultricies tempor.</string>
     <string name="option_menu">&#8942;</string>
+    <string name="recentes"><b>Ordem:</b> Mais Recentes</string>
 
     <string-array name="funcoes">
         <item>Função 1</item>

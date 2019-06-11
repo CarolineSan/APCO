@@ -12,20 +12,47 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar_claro" />
 
-    <android.support.design.widget.TabLayout
+    <com.conformidade.petrobras.apco.helper.CustomTabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tabLayout"
         android:background="@color/colorPrimary"
+        app:tabMode="scrollable"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-    </android.support.design.widget.TabLayout>
-    
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/viewPager">
+    </com.conformidade.petrobras.apco.helper.CustomTabLayout>
 
-    </android.support.v4.view.ViewPager>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txtRecentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="3dp"
+                android:text="@string/recentes"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRecentes"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </LinearLayout>
