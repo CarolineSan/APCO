@@ -67,7 +67,13 @@ public class MyAdapterPesquisa extends RecyclerView.Adapter<MyAdapterPesquisa.Vi
         viewHolder.curtir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (item.isCurtido()) {
+                    viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtir_border_black_24dp, 0, 0, 0);
+                    item.setCurtido(false);
+                } else {
                     viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtido, 0, 0, 0);
+                    item.setCurtido(true);
+                }
             }
         });
 

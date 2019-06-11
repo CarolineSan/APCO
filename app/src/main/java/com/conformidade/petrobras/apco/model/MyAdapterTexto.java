@@ -61,7 +61,6 @@ public class MyAdapterTexto extends RecyclerView.Adapter<MyAdapterTexto.ViewHold
                     }
                 });
                 popupMenu.show();
-
             }
         });
         viewHolder.curtir.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +73,6 @@ public class MyAdapterTexto extends RecyclerView.Adapter<MyAdapterTexto.ViewHold
                     viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtido, 0, 0, 0);
                     item.setCurtido(true);
                 }
-
             }
         });
 
