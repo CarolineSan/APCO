@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity
 
         //Gera dado para listas
         for(int i = 0; i<2; i++) {
-            listaItens.add(new RecyclerItem(titulo, descricao));
+            listaItens.add(new RecyclerItem(titulo, descricao, false));
         }
         //Set Adapter Texto
         adapterTexto = new MyAdapterTexto(listaItens, this);

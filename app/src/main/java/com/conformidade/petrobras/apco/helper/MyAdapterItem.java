@@ -1,4 +1,4 @@
-package com.conformidade.petrobras.apco.model;
+package com.conformidade.petrobras.apco.helper;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -12,28 +12,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.conformidade.petrobras.apco.R;
+import com.conformidade.petrobras.apco.model.RecyclerItem;
 
 import java.util.List;
 
-public class MyAdapterTexto extends RecyclerView.Adapter<MyAdapterTexto.ViewHolder> {
+public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder> {
 
     private List<RecyclerItem> listaItens;
     private Context mContext;
 
-    public MyAdapterTexto(List<RecyclerItem> listaItens, Context mContext) {
+    public MyAdapterItem(List<RecyclerItem> listaItens, Context mContext) {
         this.listaItens = listaItens;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.feed_item_texto, viewGroup, false);
-        return new ViewHolder(v);
+    public MyAdapterItem.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.feed_item_pesquisa, viewGroup, false);
+        return new MyAdapterItem.ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final MyAdapterItem.ViewHolder viewHolder, int i) {
 
         final RecyclerItem item = listaItens.get(i);
         viewHolder.txtTitle.setText(item.getTitulo());
@@ -54,8 +55,8 @@ public class MyAdapterTexto extends RecyclerView.Adapter<MyAdapterTexto.ViewHold
                             case R.id.menu_item_compartilhar:
                                 Toast.makeText(mContext, "Compartilhado!", Toast.LENGTH_SHORT).show();
                                 break;
-                                default:
-                                    break;
+                            default:
+                                break;
                         }
                         return false;
                     }
@@ -67,14 +68,7 @@ public class MyAdapterTexto extends RecyclerView.Adapter<MyAdapterTexto.ViewHold
         viewHolder.curtir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (item.isCurtido()) {
-                    viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtir_border_black_24dp, 0, 0, 0);
-                    item.setCurtido(false);
-                } else {
-                    viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtido, 0, 0, 0);
-                    item.setCurtido(true);
-                }
-
+                viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtido, 0, 0, 0);
             }
         });
 

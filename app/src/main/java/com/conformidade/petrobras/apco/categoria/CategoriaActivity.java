@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.conformidade.petrobras.apco.R;
 import com.conformidade.petrobras.apco.helper.CustomTabLayout;
 
-public class CategoriaActivity extends AppCompatActivity implements Tab1.OnFragmentInteractionListener, Tab2.OnFragmentInteractionListener, Tab3.OnFragmentInteractionListener {
+public class CategoriaActivity extends AppCompatActivity {
 
     private android.support.v7.widget.Toolbar toolbar;
     private CustomTabLayout tabLayout;
@@ -54,10 +54,5 @@ public class CategoriaActivity extends AppCompatActivity implements Tab1.OnFragm
 
             }
         });
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
     }
 }

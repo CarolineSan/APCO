@@ -4,10 +4,12 @@ public class RecyclerItem {
 
     private String titulo;
     private String descricao;
+    private boolean curtido;
 
-    public RecyclerItem(String titulo, String descricao) {
+    public RecyclerItem(String titulo, String descricao, boolean curtido) {
         this.titulo = titulo;
         this.descricao = descricao;
+        this.curtido = curtido;
     }
 
     public String getTitulo() {
@@ -24,5 +26,13 @@ public class RecyclerItem {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public boolean isCurtido() {
+        return curtido;
+    }
+
+    public void setCurtido(boolean curtido) {
+        this.curtido = curtido;
     }
 }

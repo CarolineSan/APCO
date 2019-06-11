@@ -6,8 +6,6 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.ViewGroup;
 
-import java.lang.reflect.Field;
-
 public class CustomTabLayout extends TabLayout {
 
     public CustomTabLayout(Context context) {
