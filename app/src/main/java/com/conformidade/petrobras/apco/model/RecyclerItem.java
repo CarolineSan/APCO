@@ -5,11 +5,13 @@ public class RecyclerItem {
     private String titulo;
     private String descricao;
     private boolean curtido;
+    private int typeView; //Onde será definido o tipo de visão de cada publicação
 
-    public RecyclerItem(String titulo, String descricao, boolean curtido) {
+    public RecyclerItem(String titulo, String descricao, boolean curtido, int typeView) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.curtido = curtido;
+        this.typeView = typeView;
     }
 
     public String getTitulo() {
@@ -34,5 +36,13 @@ public class RecyclerItem {
 
     public void setCurtido(boolean curtido) {
         this.curtido = curtido;
+    }
+
+    public int getTypeView() {
+        return typeView;
+    }
+
+    public void setTypeView(int typeView) {
+        this.typeView = typeView;
     }
 }

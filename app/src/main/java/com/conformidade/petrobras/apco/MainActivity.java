@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.conformidade.petrobras.apco.categoria.CategoriaActivity;
+import com.conformidade.petrobras.apco.helper.MyAdapterItem;
 import com.conformidade.petrobras.apco.model.MyAdapterPesquisa;
 import com.conformidade.petrobras.apco.model.MyAdapterQuiz;
 import com.conformidade.petrobras.apco.model.MyAdapterTexto;
@@ -23,16 +24,20 @@ import com.conformidade.petrobras.apco.ranking.RankingActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.conformidade.petrobras.apco.helper.Constant.POST_PESQUISA;
+import static com.conformidade.petrobras.apco.helper.Constant.POST_QUIZ;
+import static com.conformidade.petrobras.apco.helper.Constant.POST_TEXTO;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private RecyclerView recyclerViewTexto;
     private RecyclerView recyclerViewPesquisa;
     private RecyclerView recyclerViewQuiz;
-    private MyAdapterTexto adapterTexto;
-    private MyAdapterPesquisa adapterPesquisa;
-    private MyAdapterQuiz adapterQuiz;
-    private List<RecyclerItem> listaItens;
+    private MyAdapterItem adapter;
+    private List<RecyclerItem> listaItensTexto;
+    private List<RecyclerItem> listaItensPesquisa;
+    private List<RecyclerItem> listaItensQuiz;
     private String titulo;
     private String descricao;
 
@@ -62,25 +67,29 @@ public class MainActivity extends AppCompatActivity
         recyclerViewQuiz = findViewById(R.id.recyclerQuiz);
         recyclerViewQuiz.setLayoutManager(new LinearLayoutManager(this));
 
-        listaItens = new ArrayList<>();
+        listaItensTexto = new ArrayList<>();
+        listaItensPesquisa = new ArrayList<>();
+        listaItensQuiz = new ArrayList<>();
         titulo = "Lorem ipsum dolor sit amet consectetur";
         descricao = "Nullam venenatis erat sed bibendum aliquam. Ut turpis turpis, viverra eu eros eget, pellentesque dictum risus. Etiam consectetur, lorem sit amet laoreet aliquet, velit tellus fermentum nunc, ut facilisis massa nulla a magna. Nullam cursus id lectus eget rhoncus. Nam cursus, ante ut varius mollis, sapien diam maximus mauris, finibus congue nunc lectus nec purus. Donec luctus dictum fringilla.";
 
         //Gera dado para listas
         for(int i = 0; i<2; i++) {
-            listaItens.add(new RecyclerItem(titulo, descricao, false));
+            listaItensTexto.add(new RecyclerItem(titulo, descricao, false, POST_TEXTO));
+            listaItensPesquisa.add(new RecyclerItem(titulo, descricao, false, POST_PESQUISA));
+            listaItensQuiz.add(new RecyclerItem(titulo, descricao, false, POST_QUIZ));
         }
         //Set Adapter Texto
-        adapterTexto = new MyAdapterTexto(listaItens, this);
-        recyclerViewTexto.setAdapter(adapterTexto);
+        adapter = new MyAdapterItem(listaItensTexto, this);
+        recyclerViewTexto.setAdapter(adapter);
 
         //Set Adapter Pesquisa
-        adapterPesquisa = new MyAdapterPesquisa(listaItens, this);
-        recyclerViewPesquisa.setAdapter(adapterPesquisa);
+        adapter = new MyAdapterItem(listaItensPesquisa, this);
+        recyclerViewPesquisa.setAdapter(adapter);
 
         //Set Adapter Quiz
-        adapterQuiz = new MyAdapterQuiz(listaItens, this);
-        recyclerViewQuiz.setAdapter(adapterQuiz);
+        adapter = new MyAdapterItem(listaItensQuiz, this);
+        recyclerViewQuiz.setAdapter(adapter);
     }
 
     @Override

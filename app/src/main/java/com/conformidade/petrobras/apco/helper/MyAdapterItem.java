@@ -16,6 +16,10 @@ import com.conformidade.petrobras.apco.model.RecyclerItem;
 
 import java.util.List;
 
+import static com.conformidade.petrobras.apco.helper.Constant.POST_PESQUISA;
+import static com.conformidade.petrobras.apco.helper.Constant.POST_QUIZ;
+import static com.conformidade.petrobras.apco.helper.Constant.POST_TEXTO;
+
 public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder> {
 
     private List<RecyclerItem> listaItens;
@@ -29,8 +33,19 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
     @NonNull
     @Override
     public MyAdapterItem.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.feed_item_pesquisa, viewGroup, false);
-        return new MyAdapterItem.ViewHolder(v);
+        View v = null;
+        switch (i) {
+            case POST_TEXTO:
+                v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.feed_item_texto, viewGroup, false);
+                return new MyAdapterItem.ViewHolder(v);
+            case POST_PESQUISA:
+                v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.feed_item_pesquisa, viewGroup, false);
+                return new MyAdapterItem.ViewHolder(v);
+            case POST_QUIZ:
+                v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.feed_item_quiz, viewGroup, false);
+                return new MyAdapterItem.ViewHolder(v);
+        }
+        return null;
     }
 
     @Override
@@ -83,6 +98,16 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
     @Override
     public int getItemCount() {
         return listaItens.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        /**
+         * Recebe com argumento a posição da publicação
+         * e retorna o tipo de visão desta publicação que é do tipo int
+         */
+        return listaItens.get(position)
+                .getTypeView();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

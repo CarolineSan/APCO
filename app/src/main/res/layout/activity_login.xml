@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fundo"
+    android:background="@drawable/fundo_teste_5"
     android:gravity="center_vertical|center_horizontal"
     android:paddingLeft="24dp"
     android:paddingTop="80dp"
@@ -11,22 +11,10 @@
     android:paddingBottom="24dp"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/linkSenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="15dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="@string/recuperar_senha_texto"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp" />
-
     <android.support.design.widget.TextInputLayout
         android:id="@+id/inputLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linkSenha"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         tools:ignore="RtlCompat">
@@ -75,19 +63,32 @@
         tools:layout_editor_absoluteY="365dp" />
 
     <TextView
+        android:id="@+id/linkSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEntrar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/recuperar_senha_texto"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+    <TextView
         android:id="@+id/linkCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnEntrar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="17dp"
+        android:layout_toEndOf="@+id/linkSenha"
+        android:layout_toRightOf="@+id/linkSenha"
         android:text="@string/cadastre_texto"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="284dp" />
+        android:textSize="18sp" />
 
 
 </RelativeLayout>

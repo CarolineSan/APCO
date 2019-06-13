@@ -33,22 +33,10 @@
             android:layout_height="wrap_content"
             android:padding="15dp">
 
-            <TextView
-                android:id="@+id/txtRecentes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="3dp"
-                android:text="@string/recentes"
-                android:textSize="12sp" />
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtRecentes"/>
+                android:layout_height="wrap_content" />
 
         </RelativeLayout>
 
