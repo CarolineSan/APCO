@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar_claro" />
 
-    <com.conformidade.petrobras.apco.helper.CustomTabLayout
+    <com.compliance.petrobras.apco.helper.CustomTabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tabLayout"
@@ -20,7 +20,7 @@
         app:tabMode="scrollable"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-    </com.conformidade.petrobras.apco.helper.CustomTabLayout>
+    </com.compliance.petrobras.apco.helper.CustomTabLayout>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
