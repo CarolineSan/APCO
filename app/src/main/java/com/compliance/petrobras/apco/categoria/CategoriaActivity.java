@@ -98,6 +98,7 @@ public class CategoriaActivity extends AppCompatActivity {
                 tabLayout.removeTabAt(j);
             }
         }
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.ic_home_white_24dp));
         tabLayout.addTab(tabLayout.newTab().setText("Submenu 1"));
         tabLayout.addTab(tabLayout.newTab().setText("Submenu 2"));
         tabLayout.addTab(tabLayout.newTab().setText("Submenu 3"));
