@@ -36,7 +36,7 @@ public class CadastroActivity extends AppCompatActivity {
         adapterFuncoes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFuncao.setAdapter(adapterFuncoes);
 
-        //Configura Spinner do Vínculo com a Petrobras
+        //Configura Spinner do Vínculo com a petrobras
         spinnerVinculo = findViewById(R.id.spinner2);
         ArrayAdapter<String> adapterVinculo = new ArrayAdapter<>(
                 CadastroActivity.this,

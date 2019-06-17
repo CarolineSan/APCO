@@ -11,9 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name="com.compliance.petrobras.apco.LoginActivity"
-            android:screenOrientation="portrait">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,34 +19,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.compliance.petrobras.apco.SenhaActivity"
-            android:parentActivityName="com.compliance.petrobras.apco.LoginActivity"
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SenhaActivity"
+            android:parentActivityName=".LoginActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.compliance.petrobras.apco.LoginActivity" />
         </activity>
         <activity
-            android:name="com.compliance.petrobras.apco.CadastroActivity"
-            android:parentActivityName="com.compliance.petrobras.apco.LoginActivity"
+            android:name=".CadastroActivity"
+            android:parentActivityName=".LoginActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.compliance.petrobras.apco.LoginActivity" />
         </activity>
         <activity
-            android:name="com.compliance.petrobras.apco.MainActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.compliance.petrobras.apco.ranking.RankingActivity"
-            android:parentActivityName="com.compliance.petrobras.apco.MainActivity">
+            android:name=".ranking.RankingActivity"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.compliance.petrobras.apco.MainActivity" />
         </activity>
         <activity
-            android:name="com.compliance.petrobras.apco.categoria.CategoriaActivity"
-            android:parentActivityName="com.compliance.petrobras.apco.MainActivity">
+            android:name=".categoria.CategoriaActivity"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.compliance.petrobras.apco.MainActivity" />
