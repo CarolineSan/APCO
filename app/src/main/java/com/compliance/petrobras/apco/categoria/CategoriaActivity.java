@@ -45,7 +45,7 @@ public class CategoriaActivity extends AppCompatActivity {
 
         listaItens = new ArrayList<>();
         titulo = "Lorem ipsum dolor sit amet consectetur";
-        descricao = "Nullam venenatis erat sed bibendum aliquam. Ut turpis turpis, viverra eu eros eget, pellentesque dictum risus. Etiam consectetur, lorem sit amet laoreet aliquet, velit tellus fermentum nunc, ut facilisis massa nulla a magna. Nullam cursus id lectus eget rhoncus. Nam cursus, ante ut varius mollis, sapien diam maximus mauris, finibus congue nunc lectus nec purus. Donec luctus dictum fringilla.";
+        descricao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae elit id quam ornare tristique.";
 
         //Gera dado para listas
         for(int i = 0; i<2; i++) {
@@ -123,7 +123,7 @@ public class CategoriaActivity extends AppCompatActivity {
     private void recarregaPublicacoes(CustomTabLayout.Tab tab) {
         listaItens.clear();
         int i = tab.getPosition();
-        if (i == 0) {
+        if (i == 1) {
             for(int j = 0; j < 2; j++) {
                 listaItens.add(new RecyclerItem(titulo, descricao, false, POST_TEXTO));
                 listaItens.add(new RecyclerItem(titulo, descricao, false, POST_TEXTO));

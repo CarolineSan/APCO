@@ -7,68 +7,108 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="2dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
         app:cardUseCompatPadding="true" >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/activity_horizontal_margin">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txtTitle"
-                android:layout_width="330dp"
-                android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet consectetur"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/option_menu"
-                android:id="@+id/txtOptionDigit"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/txtTitle"
-                android:layout_alignEnd="@+id/txtTitle"
-                android:layout_alignRight="@+id/txtTitle"
-                android:layout_alignBottom="@+id/txtTitle"
-                android:paddingLeft="@dimen/activity_horizontal_margin"/>
+                <Button
+                    android:id="@+id/curtirTeste"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#ffffff"
+                    android:drawableBottom="@drawable/ic_thumb_up_black_24dp"
+                    android:paddingBottom="12dp"/>
 
-            <TextView
-                android:id="@+id/txtDescricao"
-                android:layout_width="250dp"
-                android:layout_height="70dp"
-                android:layout_below="@+id/txtTitle"
-                android:layout_marginTop="5dp"
-                android:text="@string/texto_descricao"
-                android:textAppearance="?android:textAppearanceSmall" />
+                <Button
+                    android:id="@+id/compartilhar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#ffffff"
+                    android:drawableBottom="@drawable/ic_menu_share"
+                    android:paddingBottom="12dp" />
 
-            <ImageView
-                android:id="@+id/iconType"
-                android:layout_width="75dp"
-                android:layout_height="70dp"
-                android:layout_alignTop="@+id/txtDescricao"
-                android:layout_alignEnd="@+id/txtOptionDigit"
-                android:layout_alignRight="@+id/txtOptionDigit"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/quizicon" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/curtir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtDescricao"
-                android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/ic_curtir_border_black_24dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet consectetur"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option_menu"
+                    android:id="@+id/txtOptionDigit"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/txtTitle"
+                    android:layout_alignEnd="@+id/txtTitle"
+                    android:layout_alignRight="@+id/txtTitle"
+                    android:layout_alignBottom="@+id/txtTitle"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:id="@+id/txtDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTitle"
+                    android:layout_marginTop="5dp"
+                    android:fitsSystemWindows="false"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="60dp"
+                    android:paddingRight="60dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/texto_descricao"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <ImageView
+                    android:id="@+id/iconType"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignTop="@+id/txtDescricao"
+                    android:layout_alignEnd="@+id/txtOptionDigit"
+                    android:layout_alignRight="@+id/txtOptionDigit"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/quizicon"
+                    android:layout_marginTop="5dp"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
 
 
     </android.support.v7.widget.CardView>

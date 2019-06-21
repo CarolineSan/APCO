@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +34,7 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
     @NonNull
     @Override
     public MyAdapterItem.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = null;
+        View v;
         switch (i) {
             case POST_TEXTO:
                 v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.feed_item_texto, viewGroup, false);
@@ -67,9 +68,6 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
                             case R.id.menu_item_salvar:
                                 Toast.makeText(mContext, "Salvo!", Toast.LENGTH_SHORT).show();
                                 break;
-                            case R.id.menu_item_compartilhar:
-                                Toast.makeText(mContext, "Compartilhado!", Toast.LENGTH_SHORT).show();
-                                break;
                             default:
                                 break;
                         }
@@ -84,10 +82,10 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
             @Override
             public void onClick(View v) {
                 if (item.isCurtido()) {
-                    viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtir_border_black_24dp, 0, 0, 0);
+                    viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, R.drawable.ic_thumb_up_black_24dp);
                     item.setCurtido(false);
                 } else {
-                    viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_curtido, 0, 0, 0);
+                    viewHolder.curtir.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, R.drawable.ic_thumb_up_blue_24dp);
                     item.setCurtido(true);
                 }
             }
@@ -115,14 +113,14 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
         public TextView txtTitle;
         public TextView txtDescricao;
         public TextView txtOptionDigit;
-        public TextView curtir;
+        public Button curtir;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtTitle = itemView.findViewById(R.id.txtTitle);
             txtDescricao = itemView.findViewById(R.id.txtDescricao);
             txtOptionDigit = itemView.findViewById(R.id.txtOptionDigit);
-            curtir = itemView.findViewById(R.id.curtir);
+            curtir = itemView.findViewById(R.id.curtirTeste);
         }
 
     }

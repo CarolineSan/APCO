@@ -41,17 +41,20 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ranking.RankingActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.compliance.petrobras.apco.MainActivity" />
         </activity>
         <activity
             android:name=".categoria.CategoriaActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.compliance.petrobras.apco.MainActivity" />

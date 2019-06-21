@@ -4,7 +4,4 @@
     <item
         android:id="@+id/menu_item_salvar"
         android:title="Salvar" />
-    <item
-        android:id="@+id/menu_item_compartilhar"
-        android:title="Compartilhar" />
 </menu>

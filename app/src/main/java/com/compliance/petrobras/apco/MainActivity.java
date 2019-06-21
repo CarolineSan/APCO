@@ -1,5 +1,7 @@
 package com.compliance.petrobras.apco;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.compliance.petrobras.apco.categoria.CategoriaActivity;
 import com.compliance.petrobras.apco.helper.MyAdapterItem;
@@ -28,15 +32,12 @@ import static com.compliance.petrobras.apco.helper.Constant.POST_TEXTO;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private RecyclerView recyclerViewTexto;
-    private RecyclerView recyclerViewPesquisa;
-    private RecyclerView recyclerViewQuiz;
+    private RecyclerView recyclerView;
     private MyAdapterItem adapter;
-    private List<RecyclerItem> listaItensTexto;
-    private List<RecyclerItem> listaItensPesquisa;
-    private List<RecyclerItem> listaItensQuiz;
+    private List<RecyclerItem> listaItens;
     private String titulo;
     private String descricao;
+    private TextView verTudo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,36 +58,30 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //Instanciando Variáveis
-        recyclerViewTexto = findViewById(R.id.recyclerTexto);
-        recyclerViewTexto.setLayoutManager(new LinearLayoutManager(this));
-        recyclerViewPesquisa = findViewById(R.id.recyclerPesquisa);
-        recyclerViewPesquisa.setLayoutManager(new LinearLayoutManager(this));
-        recyclerViewQuiz = findViewById(R.id.recyclerQuiz);
-        recyclerViewQuiz.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView = findViewById(R.id.recyclerTexto);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        verTudo = findViewById(R.id.verTudo);
 
-        listaItensTexto = new ArrayList<>();
-        listaItensPesquisa = new ArrayList<>();
-        listaItensQuiz = new ArrayList<>();
+        listaItens = new ArrayList<>();
         titulo = "Lorem ipsum dolor sit amet consectetur";
-        descricao = "Nullam venenatis erat sed bibendum aliquam. Ut turpis turpis, viverra eu eros eget, pellentesque dictum risus. Etiam consectetur, lorem sit amet laoreet aliquet, velit tellus fermentum nunc, ut facilisis massa nulla a magna. Nullam cursus id lectus eget rhoncus. Nam cursus, ante ut varius mollis, sapien diam maximus mauris, finibus congue nunc lectus nec purus. Donec luctus dictum fringilla.";
+        descricao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae elit id quam ornare tristique.";
 
         //Gera dado para listas
-        for(int i = 0; i<2; i++) {
-            listaItensTexto.add(new RecyclerItem(titulo, descricao, false, POST_TEXTO));
-            listaItensPesquisa.add(new RecyclerItem(titulo, descricao, false, POST_PESQUISA));
-            listaItensQuiz.add(new RecyclerItem(titulo, descricao, false, POST_QUIZ));
-        }
+        listaItens.add(new RecyclerItem(titulo, descricao, false, POST_PESQUISA));
+        listaItens.add(new RecyclerItem(titulo, descricao, false, POST_TEXTO));
+        listaItens.add(new RecyclerItem(titulo, descricao, false, POST_QUIZ));
+
         //Set Adapter Texto
-        adapter = new MyAdapterItem(listaItensTexto, this);
-        recyclerViewTexto.setAdapter(adapter);
+        adapter = new MyAdapterItem(listaItens, this);
+        recyclerView.setAdapter(adapter);
 
-        //Set Adapter Pesquisa
-        adapter = new MyAdapterItem(listaItensPesquisa, this);
-        recyclerViewPesquisa.setAdapter(adapter);
-
-        //Set Adapter Quiz
-        adapter = new MyAdapterItem(listaItensQuiz, this);
-        recyclerViewQuiz.setAdapter(adapter);
+        //Seta abrir todas as publicações
+        verTudo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), CategoriaActivity.class));
+            }
+        });
     }
 
     @Override

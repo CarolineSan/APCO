@@ -8,8 +8,8 @@
     <string name="hint_email">Digite seu e-mail</string>
     <string name="texto_inserir_email">Insira o endereço de e-mail cadastrado para recuperar a senha:</string>
     <string name="leia_termos"><u>Leia</u></string>
-    <string name="termo_texto">Nullam venenatis erat sed bibendum aliquam. Ut turpis turpis, viverra eu eros eget, pellentesque dictum risus. Etiam consectetur, lorem sit amet laoreet aliquet, velit tellus fermentum nunc, ut facilisis massa nulla a magna. Nullam cursus id lectus eget rhoncus. Nam cursus, ante ut varius mollis, sapien diam maximus mauris, finibus congue nunc lectus nec purus. Donec luctus dictum fringilla.</string>
-    <string name="texto_descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae elit id quam ornare tristique. Aliquam vulputate turpis at quam ultricies tempor.</string>
+    <string name="termo_texto">Nullam venenatis erat sed bibendum aliquam. Ut turpis turpis, viverra eu eros eget, pellentesque dictum risus.</string>
+    <string name="texto_descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae elit id quam ornare tristique.</string>
     <string name="option_menu">&#8942;</string>
     <string name="recentes"><b>Ordem:</b> Mais Recentes</string>
 
