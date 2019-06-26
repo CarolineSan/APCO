@@ -68,7 +68,7 @@
                 android:id="@+id/termo3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2. Pellentesque tincidunt cursus"
+                android:text="3. Pellentesque tincidunt cursus"
                 android:textStyle="bold"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
