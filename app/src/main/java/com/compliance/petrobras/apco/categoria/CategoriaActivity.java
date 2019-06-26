@@ -13,9 +13,9 @@ import com.compliance.petrobras.apco.model.RecyclerItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.compliance.petrobras.apco.helper.Constant.POST_PESQUISA;
-import static com.compliance.petrobras.apco.helper.Constant.POST_QUIZ;
-import static com.compliance.petrobras.apco.helper.Constant.POST_TEXTO;
+import static com.compliance.petrobras.apco.model.Constant.POST_PESQUISA;
+import static com.compliance.petrobras.apco.model.Constant.POST_QUIZ;
+import static com.compliance.petrobras.apco.model.Constant.POST_TEXTO;
 
 public class CategoriaActivity extends AppCompatActivity {
 

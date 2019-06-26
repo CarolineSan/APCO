@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,46 +23,60 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tituloTexto"
+                android:id="@+id/tituloCurtidos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="3dp"
                 android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:text="Mais curtidas"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerCurtidas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tituloCurtidos"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"/>
+
+            <TextView
+                android:id="@+id/tituloLast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@+id/recyclerCurtidas"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
                 android:text="Últimas Publicações"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerTexto"
+                android:id="@+id/recyclerLast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tituloTexto" />
+                android:layout_below="@+id/tituloLast" />
 
             <TextView
                 android:id="@+id/verTudo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/recyclerTexto"
-                android:layout_alignEnd="@+id/recyclerTexto"
-                android:layout_alignRight="@+id/recyclerTexto"
+                android:layout_below="@id/recyclerLast"
+                android:layout_alignEnd="@+id/recyclerLast"
+                android:layout_alignRight="@+id/recyclerLast"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="13dp"
                 android:layout_marginEnd="13dp"
                 android:text="Ver Tudo"
                 android:textColor="@color/colorPrimary" />
 
-            <TextView
-                android:id="@+id/tituloPesquisa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/verTudo"
-                android:layout_marginTop="13dp"
-                android:layout_marginBottom="3dp"
-                android:paddingLeft="15dp"
-                android:text="Mais curtidos"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textStyle="bold" />
 
         </RelativeLayout>
 

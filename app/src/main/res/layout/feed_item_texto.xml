@@ -25,13 +25,13 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/curtirTeste"
+                    android:id="@+id/curtir"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#ffffff"
                     android:drawableBottom="@drawable/ic_thumb_up_black_24dp"
-                    android:paddingBottom="12dp"/>
+                    android:paddingBottom="12dp" />
 
                 <Button
                     android:id="@+id/compartilhar"

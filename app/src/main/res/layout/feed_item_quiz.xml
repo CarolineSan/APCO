@@ -25,13 +25,13 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/curtirTeste"
+                    android:id="@+id/curtir"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#ffffff"
                     android:drawableBottom="@drawable/ic_thumb_up_black_24dp"
-                    android:paddingBottom="12dp"/>
+                    android:paddingBottom="12dp" />
 
                 <Button
                     android:id="@+id/compartilhar"
@@ -100,16 +100,12 @@
                     android:layout_alignEnd="@+id/txtOptionDigit"
                     android:layout_alignRight="@+id/txtOptionDigit"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/quizicon"
+                    app:srcCompat="@drawable/quizicon2"
                     android:layout_marginTop="5dp"/>
 
             </RelativeLayout>
 
-
-
         </LinearLayout>
-
-
 
     </android.support.v7.widget.CardView>
 

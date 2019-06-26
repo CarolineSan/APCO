@@ -1,7 +1,5 @@
 package com.compliance.petrobras.apco;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,6 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.compliance.petrobras.apco.categoria.CategoriaActivity;
+import com.compliance.petrobras.apco.helper.MyAdapterCurtidas;
 import com.compliance.petrobras.apco.helper.MyAdapterItem;
 import com.compliance.petrobras.apco.model.RecyclerItem;
 import com.compliance.petrobras.apco.ranking.RankingActivity;
@@ -25,16 +24,22 @@ import com.compliance.petrobras.apco.ranking.RankingActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.compliance.petrobras.apco.helper.Constant.POST_PESQUISA;
-import static com.compliance.petrobras.apco.helper.Constant.POST_QUIZ;
-import static com.compliance.petrobras.apco.helper.Constant.POST_TEXTO;
+import static com.compliance.petrobras.apco.model.Constant.CURTIDAS_PESQUISA;
+import static com.compliance.petrobras.apco.model.Constant.CURTIDAS_TEXTO;
+import static com.compliance.petrobras.apco.model.Constant.CURTIDAS_QUIZ;
+import static com.compliance.petrobras.apco.model.Constant.POST_PESQUISA;
+import static com.compliance.petrobras.apco.model.Constant.POST_QUIZ;
+import static com.compliance.petrobras.apco.model.Constant.POST_TEXTO;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerLast;
+    private RecyclerView recyclerCurtidas;
     private MyAdapterItem adapter;
+    private MyAdapterCurtidas adapterCurtidas;
     private List<RecyclerItem> listaItens;
+    private List<RecyclerItem> listaMaisCurtidos;
     private String titulo;
     private String descricao;
     private TextView verTudo;
@@ -58,11 +63,14 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //Instanciando Variáveis
-        recyclerView = findViewById(R.id.recyclerTexto);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerLast = findViewById(R.id.recyclerLast);
+        recyclerLast.setLayoutManager(new LinearLayoutManager(this));
         verTudo = findViewById(R.id.verTudo);
+        recyclerCurtidas = findViewById(R.id.recyclerCurtidas);
+        recyclerCurtidas.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         listaItens = new ArrayList<>();
+        listaMaisCurtidos = new ArrayList<>();
         titulo = "Lorem ipsum dolor sit amet consectetur";
         descricao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae elit id quam ornare tristique.";
 
@@ -71,9 +79,20 @@ public class MainActivity extends AppCompatActivity
         listaItens.add(new RecyclerItem(titulo, descricao, false, POST_TEXTO));
         listaItens.add(new RecyclerItem(titulo, descricao, false, POST_QUIZ));
 
+        listaMaisCurtidos.add(new RecyclerItem(CURTIDAS_TEXTO, false, 105));
+        listaMaisCurtidos.add(new RecyclerItem(CURTIDAS_PESQUISA, false, 98));
+        listaMaisCurtidos.add(new RecyclerItem(CURTIDAS_TEXTO, false, 85));
+        listaMaisCurtidos.add(new RecyclerItem(CURTIDAS_TEXTO, false, 72));
+        listaMaisCurtidos.add(new RecyclerItem(CURTIDAS_QUIZ, false, 69));
+        listaMaisCurtidos.add(new RecyclerItem(CURTIDAS_QUIZ, false, 68));
+
         //Set Adapter Texto
         adapter = new MyAdapterItem(listaItens, this);
-        recyclerView.setAdapter(adapter);
+        recyclerLast.setAdapter(adapter);
+
+        //Set Adapter de Mais Curtidas
+        adapterCurtidas = new MyAdapterCurtidas(listaMaisCurtidos, this);
+        recyclerCurtidas.setAdapter(adapterCurtidas);
 
         //Seta abrir todas as publicações
         verTudo.setOnClickListener(new View.OnClickListener() {

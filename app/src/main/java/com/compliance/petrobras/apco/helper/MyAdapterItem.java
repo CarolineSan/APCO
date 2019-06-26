@@ -17,9 +17,9 @@ import com.compliance.petrobras.apco.model.RecyclerItem;
 
 import java.util.List;
 
-import static com.compliance.petrobras.apco.helper.Constant.POST_PESQUISA;
-import static com.compliance.petrobras.apco.helper.Constant.POST_QUIZ;
-import static com.compliance.petrobras.apco.helper.Constant.POST_TEXTO;
+import static com.compliance.petrobras.apco.model.Constant.POST_PESQUISA;
+import static com.compliance.petrobras.apco.model.Constant.POST_QUIZ;
+import static com.compliance.petrobras.apco.model.Constant.POST_TEXTO;
 
 public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder> {
 
@@ -58,7 +58,6 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
         viewHolder.txtOptionDigit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 PopupMenu popupMenu = new PopupMenu(mContext, viewHolder.txtOptionDigit);
                 popupMenu.inflate(R.menu.option_menu_item);
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -75,7 +74,6 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
                     }
                 });
                 popupMenu.show();
-
             }
         });
         viewHolder.curtir.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +118,7 @@ public class MyAdapterItem extends RecyclerView.Adapter<MyAdapterItem.ViewHolder
             txtTitle = itemView.findViewById(R.id.txtTitle);
             txtDescricao = itemView.findViewById(R.id.txtDescricao);
             txtOptionDigit = itemView.findViewById(R.id.txtOptionDigit);
-            curtir = itemView.findViewById(R.id.curtirTeste);
+            curtir = itemView.findViewById(R.id.curtir);
         }
 
     }
