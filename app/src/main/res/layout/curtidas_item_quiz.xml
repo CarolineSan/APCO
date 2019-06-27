@@ -28,7 +28,7 @@
                     android:paddingRight="3dp"
                     android:paddingEnd="3dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/quizicon2" />
+                    app:srcCompat="@drawable/quizicon" />
 
                 <TextView
                     android:id="@+id/number_curtidas"

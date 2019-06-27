@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Compliance</string>
-    <string name="cadastre_texto"><u>Cadastre-se</u></string>
-    <string name="recuperar_senha_texto">Esqueceu a senha?</string>
+    <string name="cadastre_texto">Cadastre-se</string>
+    <string name="recuperar_senha_texto">Esqueci a senha</string>
     <string name="hint_senha">Senha</string>
     <string name="hint_login">Login</string>
     <string name="botao_enviar">Enviar</string>

@@ -28,7 +28,7 @@
                     android:paddingRight="3dp"
                     android:paddingEnd="3dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/searchicon3" />
+                    app:srcCompat="@drawable/searchicon" />
 
                 <TextView
                     android:id="@+id/number_curtidas"

@@ -100,7 +100,7 @@
                     android:layout_alignEnd="@+id/txtOptionDigit"
                     android:layout_alignRight="@+id/txtOptionDigit"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/quizicon2"
+                    app:srcCompat="@drawable/quizicon"
                     android:layout_marginTop="5dp"/>
 
             </RelativeLayout>
